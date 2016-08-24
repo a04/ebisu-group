@@ -56,6 +56,29 @@
 
     </style>
 
+    <script>
+
+
+        var addContent = function (id, title, address, description) {
+
+            var tableTemplate = "<p>\n";
+            tableTemplate += "<table id=\"___Id___\">\n";
+            tableTemplate += " <tr><th>サイト名</th><td class=\"title\">___title___</td></tr>\n";
+            tableTemplate += " <tr><th>アドレス</th><td class=\"address\">___address___</td></tr>\n";
+            tableTemplate += " <tr><th>内容</th><td class=\"description\">___description___</td></tr>\n";
+            tableTemplate += "</table>\n<p>";
+
+            var tableCreated = tableTemplate
+                    .replace("___Id___", id)
+                    .replace("___title___", title)
+                    .replace("___address___", address)
+                    .replace("___description___", description);
+
+            return tableCreated;
+
+        };
+
+    </script>
 
 </head>
 <body>
@@ -69,136 +92,14 @@
 
         <div id="main">
 
+            <script>document.write(addContent(1, "Amazon", "https://www.amazon.co.jp/", "買い物に便利です。最近はPrimeに登録しないと、いろいろと塩対応気味です。"))</script>
 
-
-
-            <!-- 旧　削除する
-            <p>
-            <h2>生活</h2>
-            <table>
-                <thead>
-                <tr>
-                    <th class="sitename">サイト名</th>
-                    <th class="address">アドレス</th>
-                    <th class="description">説明</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>
-                        アマゾン
-                    </td>
-                    <td>
-                        https://www.amazon.co.jp/
-                    </td>
-                    <td>
-                        べんりです。
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Youtube
-                    </td>
-                    <td>
-                        https://www.youtube.com/
-                    </td>
-                    <td>
-                        楽しいです。
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        メルカリ
-                    </td>
-                    <td>
-                        https://www.mercari.com/jp/
-                    </td>
-                    <td>
-                        フリマアプリ「メルカリ」のＰＣ版サイト。最近ＰＣでも出品できるようになりました。
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            </p>
-            <p>
-
-            <h2>技術</h2>
-            <table>
-                <thead>
-                <tr>
-                    <th class="sitename">サイト名</th>
-                    <th class="address">アドレス</th>
-                    <th class="description">説明</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>
-                        ドットインストール
-                    </td>
-                    <td>
-                        http://dotinstall.com/
-                    </td>
-                    <td>
-                        便利です
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        slideshare
-                    </td>
-                    <td>
-                        http://www.slideshare.net/
-                    </td>
-                    <td>
-                        べんりです。
-                    </td>
-                </tr>
-
-                </tbody>
-            </table>
-            </p>
-        -->
         </div>
         <div id="footer">
 
         </div>
     </div>
 </div>
-
-
-
-
-<table id=\"siteId\">
-    <tr><td class=\"title\"></td></tr>
-    <tr><td class=\"address\"></td></tr>
-    <tr><td class=\"description\"></td></tr>
-</table>
-
-
-<script>
-
-    var addContent = function (id,title,address,description) {
-
-        var tableTemplate = "<p>\n";
-        tableTemplate += "<table id=\"___Id___\">\n";
-        tableTemplate += "      <tr><td class=\"title\">___title___</td></tr>\n";
-        tableTemplate += "      <tr><td class=\"address\">___address___</td></tr>\n";
-        tableTemplate += "      <tr><td class=\"description\">___description___</td></tr>\n";
-        tableTemplate += "</table>\n<p>";
-
-        var tableCreated = tableTemplate
-                .replace("___Id___",id)
-                .replace("___title___",title)
-                .replace("___address___",address)
-                .replace("___description___",description);
-
-        return tablecreated;
-
-    };
-
-
-</script>
 
 
 </body>
