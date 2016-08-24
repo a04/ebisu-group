@@ -68,6 +68,11 @@
         </div>
 
         <div id="main">
+
+
+
+
+            <!-- 旧　削除する
             <p>
             <h2>生活</h2>
             <table>
@@ -153,13 +158,48 @@
                 </tbody>
             </table>
             </p>
-
+        -->
         </div>
         <div id="footer">
 
         </div>
     </div>
 </div>
+
+
+
+
+<table id=\"siteId\">
+    <tr><td class=\"title\"></td></tr>
+    <tr><td class=\"address\"></td></tr>
+    <tr><td class=\"description\"></td></tr>
+</table>
+
+
+<script>
+
+    var addContent = function (id,title,address,description) {
+
+        var tableTemplate = "<p>\n";
+        tableTemplate += "<table id=\"___Id___\">\n";
+        tableTemplate += "      <tr><td class=\"title\">___title___</td></tr>\n";
+        tableTemplate += "      <tr><td class=\"address\">___address___</td></tr>\n";
+        tableTemplate += "      <tr><td class=\"description\">___description___</td></tr>\n";
+        tableTemplate += "</table>\n<p>";
+
+        var tableCreated = tableTemplate
+                .replace("___Id___",id)
+                .replace("___title___",title)
+                .replace("___address___",address)
+                .replace("___description___",description);
+
+        return tablecreated;
+
+    };
+
+
+</script>
+
 
 </body>
 </html>
