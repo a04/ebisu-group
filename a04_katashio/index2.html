@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>よく使うサイトの紹介</title>
+
+    <style>
+        body {
+            background-color: #eeeeee;
+        }
+        #wrapper {}
+        #container {
+            width: 800px;
+            margin: 0 auto 0 auto;
+        }
+        #header {}
+        #main {}
+        #footer {}
+        table {}
+
+        th {
+            background-color: #ddffff;
+            width: 100px;
+        }
+        td {
+            background-color: #ffffff;
+            width: 700px;
+        }
+
+    </style>
+
+    <script>
+
+        //tableタグを出力する関数。サイトの情報を簡単に追加。
+        var addContent = function (id, title, address, description) {
+
+            var tableTemplate = "<p>\n" +
+                    "<table id=\"___Id___\">\n" +
+                    "  <tr><th>サイト名</th><td>___title___</td></tr>\n" +
+                    "  <tr><th>アドレス</th>" +
+                    "      <td><a href=\"___address___\">___address___</a></td></tr>\n" +
+                    "  <tr><th>内容</th><td>___description___</td></tr>\n" +
+                    "</table>\n" +
+                    "<p>";
+
+            var tableCreated = tableTemplate
+                    .replace("___Id___", id)
+                    .replace("___title___", title)
+                    .replace("___address___", address)
+                    .replace("___address___", address)
+                    .replace("___description___", description);
+
+            return tableCreated;
+
+        };
+
+    </script>
+
+</head>
+<body>
+<div id="wrapper">
+    <div id="container">
+        <div id="header">
+
+            <h1>よく使うサイトの紹介</h1>
+            <p>
+                よく使うサイトの紹介ページを作りました。<br/>
+                紹介するサイトごとの「&lt;table&gt;...&lt;/table&gt;」を生成する
+                JSの関数（addContent()）を作り、サイトの追加を簡単にしました。
+
+            </p>
+        </div>
+
+        <div id="main">
+
+            <script>
+                document.write(addContent(1,
+                        "Amazon",
+                        "https://www.amazon.co.jp/",
+                        "買い物に便利です。" +
+                        "最近はPrimeに登録しないと、いろいろと塩対応気味です。"));
+
+
+                document.write(addContent(2,
+                        "メルカリ",
+                        "https://www.mercari.com/jp/",
+                        "フリマアプリ「メルカリ」のＰＣ版サイトです。" +
+                        "最近ＰＣでも出品できるようになりました。不用品の処分に便利です。" +
+                        "「もったいなくて捨てられない！！」という気持ちを和らげてくれます。"));
+
+
+                document.write(addContent(3,
+                        "Youtube",
+                        "https://www.youtube.com/",
+                        "便利です。楽しです。Youtubeがあればテレビは要りません。" +
+                        "楽しむためのコンテンツだけでなく、勉強になるコンテンツも充実しています。"));
+
+                document.write(addContent(4,
+                        "ドットインストール",
+                        "http://dotinstall.com/",
+                        "「３分動画でマスターする初心者向けプログラミング学習サイト」です。" +
+                        "HTML、CSS、JS、PHPのコンテンツも充実しています。" +
+                        "\n月額980円のプレミアム会員がおすすめです。" +
+                        "CakePHPのレッスンが受けられます。" +
+                        "倍速再生機能、進捗管理機能も使えるようになります。"));
+
+            </script>
+
+
+            <p>
+                <h2>addContent() code</h2>
+                <img src="addContent1.png" alt="addContent() code">
+            </p>
+            <p>
+                <h2>addContent() example</h2>
+                <img src="addContent2.png" alt="addContent() example">
+            </p>
+
+        </div>
+        <div id="footer">
+            <p><a href="../index.html">目次に戻る</a></p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
