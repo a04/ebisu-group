@@ -132,6 +132,10 @@ body {
     margin: 0 0 40px;
 }
 
+#mainContents #btmR #story{
+    margin: 0 0 40px;
+}
+
 #mainContents #pageTop{
     clear: both;
     text-align: right;
