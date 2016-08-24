@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ja" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>page_ebi</title>
+    <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+
+        }
+        #wrapper {
+            width: 680px;
+            margin: 0 auto;
+            background: #aaaaaa;
+
+        }
+        #container{
+            width: 640px;
+            margin: 0px;
+            padding: 20px;
+            background: black;
+        }
+        #nav {
+            padding: 3px 0px 4px 10px;
+            background: black;
+            border: dotted 1px;
+            opacity: 0.7;
+        }
+        #nav li {
+            display: inline;
+            list-style: none;
+            padding-right: 30px;
+        }
+        #footer {
+            clear: both;
+        }
+        h1{
+            font-family:Meiryo;
+            padding: 20px 0 0 20px;
+            color: #ffffff;
+            font-size: 30px;
+            border-bottom: #40000d;;
+        }
+        h2 {
+            color: #442220;
+            font-size: 18px;
+            border-bottom-width: 2px;
+            border-bottom-style: dotted;
+            border-bottom-color: #442220;
+            margin-top: 30px;
+            margin-right: 0px;
+            margin-bottom: 10px;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+        .h2me {
+             color: white;
+            text-align: center;
+             font-size: 18px;
+             border-bottom-width: 1px;
+             border-bottom-style: solid;
+             border-bottom-color:gainsboro;
+             margin-top: 30px;
+             margin-right: 0px;
+             margin-bottom: 10px;
+             padding-top: 10px;
+             padding-right: 10px;
+             padding-left: 10px;
+             padding-bottom: 10px;
+         }
+        p {
+            padding: 0px 20px;
+            line-height: 150%;
+            font-size: 14px;
+            color: white;
+        }
+        .float img{
+            float: left;
+            padding-right: 1em;
+        }
+        .me p{
+            align:center;
+            padding: 50px;
+            color: gray;
+        }
+        .clear {
+            clear: both;
+        }
+        #pageTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        #pageTop a {
+            display: block;
+            z-index: 999;
+            padding: 2px 0 0 0;
+            border-radius: 20px;
+            width: 30px;
+            height: 30px;
+            background-color: gray;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        #pageTop a:hover {
+            text-decoration: none;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <h1>
+    最近ハマったものを紹介するテスト
+    </h1>
+    <div id="nav">
+        <ul>
+            <li><a href="#a1">1</a></li>
+            <li><a href="#a2">2</a></li>
+            <li><a href="#a3">aboutMe</a></li>
+        </ul>
+    </div>
+<!-- main～ -->
+<a name="a1"></a>
+    <h2 class="clear">ゲーム版ウォーキングデッド シーズン1～2</h2>
+    <p class="float"><img src="walkingdeadG.jpg" width="400"> ゲーム実況からはまってしまったこのシリーズ、ゲームは所持してません。<br>
+        失業後暇を持て余した勢いで、実況者3人分、エンディングコンプリートするまで見てしまいました。
+        ドラマ版と同じく、ゾンビは脇役のヒューマンドラマです。<br>
+        基本的に見た後鬱るので要注意。
+    </p>
+    <a name="a2">
+    <h2 class="clear">ドラマ版ウォーキングデッド　シーズン1～6</a></h2>
+    <p class="float"><img src="walkingdeadV.jpg" width="400">言わずと知れた海外ゾンビドラマです。<br>ゲーム版にはまった後にシーズン1から見返して、お察し通り大ハマり。<br>本国の配信でリアルタイムで佳境に入っているので、レギュラーメンバーが危機に陥るのにビクつく毎日です。<br><br><br><br><br></p>
+
+<div class="clear">
+<div id="container">
+    <dev class="h2me"><a name="a3">aboutMe</a></dev>
+    <p class="me">10年のブランクを埋めたいと思い立ち職業訓練コースを受講。<br>コーディングド素人。実はdreamweaver無しで初めてページ作りました(汗</p>
+</div>
+
+<p id="pageTop"><a href="#">top</a></p>
+
+<!-- footer～ -->
+<div id="footer">
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+    //■page topボタン
+    $(function(){
+        var topBtn=$('#pageTop');
+        topBtn.hide();
+
+//◇ボタンの表示設定
+        $(window).scroll(function(){
+            if($(this).scrollTop()>80){
+                //---- 画面を80pxスクロールしたら、ボタンを表示する
+                topBtn.fadeIn();
+            }else{
+                //---- 画面が80pxより上なら、ボタンを表示しない
+                topBtn.fadeOut();
+            }
+        });
+
+// ◇ボタンをクリックしたら、スクロールして上に戻る
+        topBtn.click(function(){
+            $('body,html').animate({
+                scrollTop: 0},500);
+            return false;
+        });
+
+    });
+</script>
+</body>
+</html>
+
