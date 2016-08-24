@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,"ＭＳ Ｐゴシック","Helvetica Neue",Helvetica,Arial,Roboto,"Droid Sans",sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background-color: #fbb6b6;
+    -o-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-size-adjust: 100%;
+}
+
+#headerArea {
+    width: 100%;
+    background: black;
+    color: #fff;
+    display: flex;
+    z-index: 9999;
+    justify-content: center;
+    align-items: stretch;
+    opacity: 0.9;
+}
+
+#headerArea #headerAreaInner {
+    width: 960px;
+    align-items: stretch;
+}
+
+#headerArea #headerAreaInner h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 36px;
+    float: left;
+}
+
+#headerArea #headerAreaInner #navi{
+    float: right;
+    margin-top: 6px;
+}
+
+#headerArea #headerAreaInner #navi ul li {
+    display: inline-block;
+}
+
+#headerArea #headerAreaInner #navi ul li a{
+    display: block;
+    background-color: black;
+    color: white;
+    border-radius: 18px;
+    padding: 10px;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#headerArea #headerAreaInner #navi ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+#mainContents{
+    text-align: center;
+    width: 960px;
+    padding: 30px;
+    color: #333333;
+    margin: 30px auto 50px;
+    background-color: white;
+}
+
+#mainContents #window {
+    width:720px;
+    height: 330px;
+    padding: 0 40px;
+    box-sizing:border-box;
+    position:relative;
+    margin:0 auto;
+    margin-bottom: 10px;
+    text-align:center;
+}
+
+#mainContents h2{
+    margin: 0 0 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#mainContents h2 span{
+    display: block;
+    color: #45cccc;
+    font-size: 30px;
+}
+
+#mainContents h3{
+    margin: 0 0 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#mainContents h4{
+    margin: 0 0 10px;
+    border-bottom: 3px solid #45cccc;
+    border-left: 3px solid #000000;
+    font-size: 22px;
+    padding: 0 10px;
+}
+
+#mainContents #description{
+    text-align: left;
+    margin: 0 0 50px;
+    padding-top: 10px;
+}
+
+#mainContents #youtube{
+    margin: 0 0 50px;
+}
+
+#mainContents #btmL{
+    float: left;
+    width: 340px;
+}
+
+#mainContents #btmR{
+    float: right;
+    text-align: left;
+    width: 540px;
+}
+
+#mainContents #btmR #commentary{
+    margin: 0 0 40px;
+}
+
+#mainContents #pageTop{
+    clear: both;
+    text-align: right;
+    padding-top: 50px;
+}
+
+#mainContents #pageTop a{
+    text-decoration: underline;
+    color: black;
+}
