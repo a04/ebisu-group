@@ -4,21 +4,49 @@
     <meta charset="UTF-8">
     <title>目次</title>
     <style>
-        th{
-            background-color:#dddddd;
+        h1{ margin: 50px; }
+        #wrapContents {
+            width: 600px;
+            text-align: center;
+            margin: 0 auto;
         }
-        tr{
-            background-color:#dddddd;
+        #wrapContents table {
+            width: 100%;
+        }
+        #wrapContents table tr {
+            background-color: #dddddd;
+        }
+        #wrapContents table tr th {
+            background-color: #000000;
+            color: white;
+            padding: 10px;
+        }
+        #wrapContents table tr td {
+            padding: 10px;
         }
     </style>
 </head>
 <body>
+<div id="wrapContents">
 <h1>目次</h1>
-<table>
-    <tr><th>タイトル</th><th>作成者</th></tr>
-    <tr><td><a href="a04_katashio.html">よく使うサイトの紹介</a></td><td>かたしお</td></tr>
-    <tr><td><a href="">サイト名</a></td><td>作成者</td></tr>
-    <tr><td><a href="">サイト名</a></td><td>作成者</td></tr>
-</table>
+    <table>
+        <tr>
+            <th width="50%">タイトル</th>
+            <th>作成者</th>
+        </tr>
+        <tr>
+            <td><a href="a04_katashio/index.html">よく使うサイトの紹介</a></td>
+            <td>かたしお</td>
+        </tr>
+        <tr>
+            <td><a href="a11_tokeshi/index.html">おすすめ映画の紹介</a></td>
+            <td>とけし</td>
+        </tr>
+        <tr>
+            <td><a href="a02_ebisuya/index.html">サイト名</a></td>
+            <td>えびすや</td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
